@@ -43,6 +43,7 @@
   color: #f0f0f0;
   font-weight: 600;
   margin-top: 2%;
+  cursor : pointer;
 }
 h4{
   text-align: center;
@@ -63,6 +64,14 @@ body{
   background-image: url('servers.jpg');
   background-size: auto;
   background-repeat: no-repeat;
+}
+#popupWindow{
+  width: 80%;
+  height: 70%;
+  position: absolute;
+  background-color: red;
+  margin-left: -50%;
+  margin-top: 8%;
 }
 #nameBox{
   animation-duration: 3s;
