@@ -38,12 +38,12 @@ p, .cellValue, li{
   margin-right: 5px;
   color: #9a9a9a;
   font-family: Segoe UI, MontSerrat,Tahoma;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 500;
 }
 body{
   background-image: url('servers.jpg');
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
 }
 #nameBox{
