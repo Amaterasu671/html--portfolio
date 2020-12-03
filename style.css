@@ -196,7 +196,7 @@ a:-webkit-any-link {
     cursor: pointer;
     text-decoration: underline;
 }
-#inner3 tr:hover{
+#inner1 tr:hover{
   transform: translateX(30px);
   transition-duration: 0.5s;
 }
