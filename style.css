@@ -104,6 +104,7 @@ body{
 }
 #container5 img{
   margin-top: 2vh;
+  margin-left: 50vw;
 }
 .infoPopup{
   width: 100%;
@@ -155,6 +156,12 @@ body{
   text-align: right;
   margin-right: 20px;
   margin-top: 25vh;
+}
+#completeName{
+  font-size: 2em;
+  text-align: left;
+  position: absolute;
+  margin-top: -30vh;
 }
 #contacter{
   margin-top: 15vh;
@@ -209,9 +216,9 @@ a:-webkit-any-link {
   justify-content: center;
   text-align: right;
   word-wrap: break-word;
-  overflow: auto;
+  overflow: hidden;
 }
-.textContainer p{
+.textContainer .text{
   color: #9a9a9a;
   font-family: Segoe UI;
   font-size: 1.1em;
