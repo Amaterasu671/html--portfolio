@@ -10,11 +10,11 @@
   bottom: 0px;
   display: flex;
   flex-direction: column;
+  border: 1px solid #026ccf;
 }
 .infoBox:hover{
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
   transition-duration : 300ms;
-  z-index: 2;
 }
 .titleContainer{
   width: 100%;
@@ -47,8 +47,8 @@
 }
 h4{
   text-align: center;
-  font-family : Trebuchet MS;
-  coldor: #cacaca;
+  font-family : 'Roboto Mono', monospace;
+  color: #cacaca;
   fondt-size: 1.1em;
   font-weidght: 700;
 }
@@ -60,51 +60,248 @@ p, .cellValue, li{
   font-size: 0.9em;
   font-weight: 500;
 }
+p:hover, .cellValue:hover, li:hover{
+  background-color: #005db51f;
+  transition-duration: 1s;
+  border-radius: 20px;
+  transform: scale(1.02, 1.02);
+}
 body{
-  background-image: url('servers.jpg');
-  background-size: auto;
+  background-image: url('Images/image2.jpg');
+  background-color: #2f2f2f;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 #popupWindow{
-  width: 80%;
-  height: 70%;
+  width: 80vw;
+  height: 90vh;
   position: absolute;
-  background-color: red;
-  margin-left: -50%;
-  margin-top: 8%;
+  margin-left: -100%;
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+}
+#popupHeader{
+  width: 100%;
+  height: 48px;
+  background-color: transparent;
+}
+#imgClose{
+  margin-left: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+#imgClose:hover{
+  transform: rotate(45deg);
+  transition-duration: 200ms;
+}
+#popupBody{
+  width: 100%;
+  height: 100%;
+  background-color: #2f2f2f;
+  boox-shadow: -80px 80px 80px 80px #2f2f2f;
+  border: 1px solid white;
+}
+#container5 img{
+  margin-top: 2vh;
+}
+.infoPopup{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.inner{
+  width: 100%;
+  height: 100%;
+}
+.essai{
+  position: absolute;
+  margin: auto;
+}
+#inner1, #inner2, #inner3, #inner4, #inner5, #inner6{
+  background-color: #2f2f2f;
+  position: absolute;
+}
+#imgBas{
+  margin-left: 100%;
+  margin-top: 0%;
+  cursor: pointer;
+  z-index: 5;
+}
+#imgHaut{
+  margin-left: 100%;
+  margin-top: 70vh;
+  cursor: pointer;
+  z-index: 5;
+}
+#imgBas:hover{
+  transform: translateY(5px);
+  transition-duration: 0.2s;
+}
+#imgHaut:hover{
+  transform: translateY(-5px);
+  transition-duration: 0.2s;
+}
+.bonjour{
+  color: white;
+  font-size: 5em;
+  font-family: Trebuchet MS;
+  font-weight: bolder;
+  line-height: 50%;
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 25vh;
+}
+#welcome{
+  margin-top: 0;
+}
+#tony{
+  color: #026ccf;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 0;
+}
+.bonjour:hover{
+  transform: translateX(-30px);
+  transition-duration: 0.5s;
+}
+#tony:hover{
+  transform: translateX(30px);
+  transition-duration: 0.5s;
+}
+#bjr{
+  margin-top: 25vh;
+}
+.contact{
+  color: white;
+  font-family: Segoe UI;
+  font-size: 1.1em;
+  transform: translateX(30px);
+  transition-duration: 0.2s;
+  width: 90%;
+}
+#downloadCV{
+  margin-top: -2%;
+  color: #026ccf;
+}
+a:-webkit-any-link {
+    color: #026ccf;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#inner3 tr:hover{
+  transform: translateX(30px);
+  transition-duration: 0.5s;
+}
+.textContainer{
+  width: 90%;
+  margin: auto;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  word-wrap: break-word;
+  overflow: auto;
+}
+.textContainer p{
+  color: #9a9a9a;
+  font-family: Segoe UI;
+  font-size: 1.1em;
+  padding: 5px;
+  line-height: 200%;
+}
+.textContainer img{
+  width: 40%;
+}
+.text{
+  font-size: 2em;
+  text-align: left;
+}
+#fermer{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 1em;
+}
+#slider{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+#slide{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#imgGauche, #imgDroite{
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  width: 50px;
+}
+#imgGauche{
+  left: 0;
+}
+#imgDroite{
+  right: 0;
+}
+#imgGauche:hover{
+  transform: translateX(-5px);
+  transition-duration: 0.2s;
+}
+#imgDroite:hover{
+  transform: translateX(5px);
+  transition-duration: 0.2s;
+}
+#slider:hover #imgGauche, #slider:hover #imgDroite {
+    opacity: 1;
 }
 #nameBox{
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: deplaceNameBox;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 #studiesBox{
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: deplaceStudiesBox;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 #experienceBox{
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: deplaceExperienceBox;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 #skillsBox{
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: deplaceSkillsBox;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 #realisationsBox{
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: deplaceRealisationsBox;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 #hobbiesBox{
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: deplaceHobbiesBox;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -191,5 +388,59 @@ body{
     left: 25%;
     right: 0px;
     bottom: 0px;
+  }
+}
+@keyframes slide {
+  from{
+    margin-left: -100%;
+    z-index: 0;
+  }
+  to{
+    margin-left: 10%;
+    z-index: 3;
+  }
+}
+@keyframes slideBack {
+  from{
+    margin-left: 10%;
+    z-index: 3;
+  }
+  to{
+    margin-left: -100%;
+    z-index: 0;
+  }
+}
+@keyframes slideUp {
+  from{
+    mmargin-top: -100%;
+    z-index: 0;
+    opacity: 0;
+  }
+  to{
+    mmargin-top: 0%;
+    z-index: 1;
+    opacity: 1;
+  }
+}
+@keyframes slideDown {
+  from{
+    mmargin-top: 0%;
+    z-index: 1;
+    opacity: 1;
+  }
+  to{
+    mmargin-top: -100%;
+    z-index: 0;
+    opacity: 0;
+  }
+}
+@keyframes animeImgHaut {
+  from{
+    margin-top: 0%;
+    opacity: 0;
+  }
+  to{
+    margin-top: 70vh;
+    opacity: 1;
   }
 }

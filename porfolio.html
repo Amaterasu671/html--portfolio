@@ -5,152 +5,224 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body id="mainBody" onload="firstLoad()">
     <main>
-      <div class="popup" id="popupWindow">
-        
-      </div>
-      <div class="infoBox" id="nameBox">
-        <div class="titleContainer" id="nameHeader">
-          <h4>IDENTIFICATION ET CONTACTS</h4>
+      <section class="popup" id="popupWindow">
+        <p class="contact" id="fermer">Fermer pour avoir une vue globale</p>
+        <div id="popupHeader">
+          <img src="Images\close.png" alt="close" id="imgClose" onclick="slideBackPopup()">
+          <img src="Images\haut.png" alt="haut" id="imgHaut" onclick="slideUp()">
+          <img src="Images\bas.png" alt="bas" id="imgBas" onclick="slideDown()">
         </div>
-        <div class="infoContainer" id="nameContainer">
-          <p>RASOLONJANAHARY</p>
-          <p>Mirija Anthonio Andriambahoaka</p>
-          <p>IGGLIA5 n° 36</p>
-          <table>
-            <tr>
-              <td>
-                <img src="yahoo.png" alt="yahoo mail">
-              </td>
-              <td class="cellValue">tony_rasolonjanahary@yahoo.fr</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="fb.png" alt="facebook">
-              </td>
-              <td class="cellValue">Tony Andriambahoaka</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="github.png" alt="github">
-              </td>
-              <td class="cellValue">Amaterasu671</td>
-            </tr>
-          </table>
+        <div id="popupBody">
+          <div class="infoPopup" id="namePopup">
+            <div class="inner" id="inner1">
+              <div id="slider">
+                <img src="Images\img5.jpg" id="slide" alt="transcriptor">
+                <img src="Images\gauche.png" id="imgGauche" alt="gauche" onclick="ChangeSlide(-1)">
+                <img src="Images\droite.png" id="imgDroite" alt="droite" onclick="ChangeSlide(1)">
+              </div>
+            </div>
+            <div class="inner" id="inner2">
+              <h1 class="bonjour">Réalisations</h1>
+              <p class="text">Jusque là, mes réalisations concernent toutes des projets de recherche réalisés pour l'université, ainsi que des projets personnels. Mais tout pourrait commencer par le votre ;)</p>
+              <p class="contact">Suivant : liste des réalisations</p>
+            </div>
+            <div class="inner" id="inner3">
+              <h1 class="bonjour">Me contacter ?</h1>
+              <p class="text">Je recherche des opportunités de collaborer avec des entreprises, agences ou particuliers, et pas seulement de travailler pour elles. Si vous êtes intéressés, n'hésitez pas à consulter les liens ci-dessous.</p>
+              <table>
+                <tr>
+                  <td>
+                    <a href="http://facebook.com/tony.andriambahoaka" target="_blank"><img src="Images\facebookBig.png" alt="facebook"></a>
+                  </td>
+                  <td>
+                    <p class="contact">Tony Andriambahoaka</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="http://mail.yahoo.com" target="_blank"><img src="Images\yahooBig.png" alt="yahoo"></a>
+                  </td>
+                  <td>
+                    <p class="contact">tony_rasolonjanahary@yahoo.fr</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="http://github.com/amaterasu671" target="_blank"><img src="Images\githubBig.png" alt="github"></a>
+                  </td>
+                  <td>
+                    <p class="contact">Amaterasu671</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="inner" id="inner4">
+              <h1 class="bonjour">Expériences</h1>
+              <p class="text">Cette rubrique reste encore à compléter, et j'espère que vous y contribuerez, grâce peut-être à notre future collaboration ;)</p><br>
+              <p class="contact">J'ai effectué un stage en entreprise au sein de la société TELMA, pour la préparation de mon diplôme de Licence : <i>Mise en place des évolutions sur le service d'interfaçage BNI.</i></p>
+            </div>
+            <div class="inner" id="inner5">
+              <div class="textContainer" id="container5">
+                <img src="Images\ispm.png" alt="ispm Logo">
+                <p class="text">Etudiant en Informatique, dans la filière <i>Informatique de gestion, génie logiciel et intelligence artificielle, </i>à l'<i><b>ISPM</b>(Institut Supérieur Polytechnique de Madagascar)</i>, je suis actuellement au niveau M2, c'est à dire que mon diplôme d'ingéniorat est en cours.<br>
+                Etant quelqu'un de polyvalent, je suis donc naturellement un développeur fullstack ; c'est à dire que je peux non seulement prendre en charge le développement front-end mais aussi le côté back-end. En effet, la formation qu'on nous a inculquée à l'ISPM est, si je puis le dire, assez générale mais aussi spécialisée.
+                </p>
+                <p id="downloadCV"><u><i><a href="cv.pdf" target="_blank">Télécharger mon CV</a></i></u></p>
+              </div>
+            </div>
+            <div class="inner" id="inner6">
+              <h1 class="bonjour" id="bjr">Bonjour,</h1>
+              <h1 class="bonjour" id="welcome">Bienvenue.</h1>
+              <h1 class="bonjour" id="tony">Je m'appelle Tony</h1>
+            </div>
+          </div>
         </div>
-        <div class="seeMore">
-          <p id="moreInfos"><u>Voir plus</u></p>
+      </section>
+      <section id="infoBoxContainer">
+        <div class="infoBox" id="nameBox">
+          <div class="titleContainer" id="nameHeader">
+            <h4>IDENTIFICATION ET CONTACTS</h4>
+          </div>
+          <div class="infoContainer" id="nameContainer">
+            <p>RASOLONJANAHARY</p>
+            <p>Mirija Anthonio Andriambahoaka</p>
+            <p>IGGLIA5 n° 36</p>
+            <table>
+              <tr>
+                <td>
+                  <img src="Images\yahoo.png" alt="yahoo mail">
+                </td>
+                <td class="cellValue">tony_rasolonjanahary@yahoo.fr</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="Images\fb.png" alt="facebook">
+                </td>
+                <td class="cellValue">Tony Andriambahoaka</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="Images\github.png" alt="github">
+                </td>
+                <td class="cellValue">Amaterasu671</td>
+              </tr>
+            </table>
+          </div>
+          <div class="seeMore" onclick="slidePopup('nameBox')">
+            <p id="moreInfos"><u>Voir plus</u></p>
+          </div>
         </div>
-      </div>
-      <div class="infoBox" id="studiesBox">
-        <div class="titleContainer" id="StudiesHeader">
-          <h4>EDUCATIONS ET QUALIFICATIONS</h4>
+        <div class="infoBox" id="studiesBox">
+          <div class="titleContainer" id="StudiesHeader">
+            <h4>EDUCATIONS ET QUALIFICATIONS</h4>
+          </div>
+          <div class="infoContainer" id="studiesContainer">
+            <p><b><i>2020</i></b> : 5ème année de la filière <i>Informatique de gestion, génie logiciel et intelligence artificielle(IGGLIA)</i>, diplôme de Master en cours.</p>
+            <p><b><i>2015-2019</i></b> : années 1 à 4 de la filière <i>Informatique de gestion, génie logiciel et intelligence artificielle(IGGLIA).</i></p>
+            <p><b><i>2015</i></b> : Baccalauréat série C, mention assez-bien</p>
+          </div>
+          <div class="seeMore" onclick="slidePopup('studiesBox')">
+            <p id="moreInfos"><u>Voir plus</u></p>
+          </div>
         </div>
-        <div class="infoContainer" id="studiesContainer">
-          <p><b><i>2020</i></b> : 5ème année de la filière <i>Informatique de gestion, génie logiciel et intelligence artificielle(IGGLIA)</i>, diplôme de Master en cours.</p>
-          <p><b><i>2015-2019</i></b> : années 1 à 4 de la filière <i>Informatique de gestion, génie logiciel et intelligence artificielle(IGGLIA).</i></p>
-          <p><b><i>2015</i></b> : Bacaclauréat série C, mention assez-bien</p>
+        <div class="infoBox" id="experienceBox">
+          <div class="titleContainer" id="experienceHeader">
+            <h4>EXPERIENCES</h4>
+          </div>
+          <div class="infoContainer" id="experienceContainer">
+            <p><b><i>Stage en entreprise</i></b> au sein de la société <b>TELMA</b> : Mise en place des évolutions sur le service d'interfaçage BNI</p>
+          </div>
+          <div class="seeMore" onclick="slidePopup('experienceBox')">
+            <p id="moreInfos"><u>Voir plus</u></p>
+          </div>
         </div>
-        <div class="seeMore">
-          <p id="moreInfos"><u>Voir plus</u></p>
+        <div class="infoBox" id="skillsBox">
+          <div class="titleContainer" id="skillsHeader">
+            <h4>IT SKILLS</h4>
+          </div>
+          <div class="infoContainer" id="skillsContainer">
+            <p><u>Office automation : </u></p>
+            <ul>
+              <li>Microsoft word</li>
+              <li>Microsoft Excel</li>
+              <li>Microsoft Powerpoint...</li>
+            </ul>
+            <p><u>Langages de programmation : </u></p>
+            <ul>
+              <li>C#, Python, C, Java, Javascript</li>
+              <li>Pascal, VB, SQL, PL/SQL</li>
+              <li>XML, HTML5, CSS3</li>
+            </ul>
+          </div>
+          <div class="seeMore" onclick="slidePopup('skillsBox')">
+            <p id="moreInfos"><u>Voir plus</u></p>
+          </div>
         </div>
-      </div>
-      <div class="infoBox" id="experienceBox">
-        <div class="titleContainer" id="experienceHeader">
-          <h4>EXPERIENCES</h4>
+        <div class="infoBox" id="realisationsBox">
+          <div class="titleContainer" id="realisationsHeader">
+            <h4>REALISATIONS</h4>
+          </div>
+          <div class="infoContainer" id="realisationsContainer">
+            <p><b><i>Transcriptor</i></b> : Logiciel de transcription</p>
+            <p><b><i>Soulmeet</i></b> : site de rencontre</p>
+            <p><b><i>FileLocker</i></b> : Logiciel de verrouillage de fichiers</p>
+            <p><b><i>uManage</i></b> : Logiciel de gestion d'établissement universitaire</p>
+          </div>
+          <div class="seeMore" onclick="slidePopup(realisationsBox)">
+            <p id="moreInfos"><u>Voir plus</u></p>
+          </div>
         </div>
-        <div class="infoContainer" id="experienceContainer">
-          <p><b><i>Stage en entreprise</i></b> au sein de la société <b>TELMA</b> : Mise en place des évolutions sur le service d'interfaçage BNI</p>
+        <div class="infoBox" id="hobbiesBox">
+          <div class="titleContainer" id="hobbiesHeader">
+            <h4>CENTRES D'INTERET</h4>
+          </div>
+          <div class="infoContainer" id="hobbiesContainer">
+            <table>
+              <tr>
+                <td>
+                  <img src="Images\controller.png" alt="jeu video">
+                </td>
+                <td class="cellValue">Jeux vidéo</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="Images\football.png" alt="football">
+                </td>
+                <td class="cellValue">Football</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="Images\musique.png" alt="musique">
+                </td>
+                <td class="cellValue">Musique</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="Images\natation.png" alt="natation">
+                </td>
+                <td class="cellValue">Natation</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="Images\babyfoot.png" alt="babyfoot">
+                </td>
+                <td class="cellValue">Babyfoot</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="Images\pingpong.png" alt="pingpong">
+                </td>
+                <td class="cellValue">Ping pong</td>
+              </tr>
+            </table>
+          </div>
+          <div class="seeMore" onclick="slidePopup('hobbiesBox')">
+            <p id="moreInfos"><u>Voir plus</u></p>
+          </div>
         </div>
-        <div class="seeMore">
-          <p id="moreInfos"><u>Voir plus</u></p>
-        </div>
-      </div>
-      <div class="infoBox" id="skillsBox">
-        <div class="titleContainer" id="skillsHeader">
-          <h4>IT SKILLS</h4>
-        </div>
-        <div class="infoContainer" id="skillsContainer">
-          <p><u>Office automation : </u></p>
-          <ul>
-            <li>Microsoft word</li>
-            <li>Microsoft Excel</li>
-            <li>Microsoft Powerpoint...</li>
-          </ul>
-          <p><u>Langages de programmation : </u></p>
-          <ul>
-            <li>C#, Python, C, Java, Javascript</li>
-            <li>Pascal, VB, SQL, PL/SQL</li>
-            <li>XML, HTML5, CSS3</li>
-          </ul>
-        </div>
-        <div class="seeMore">
-          <p id="moreInfos"><u>Voir plus</u></p>
-        </div>
-      </div>
-      <div class="infoBox" id="realisationsBox">
-        <div class="titleContainer" id="realisationsHeader">
-          <h4>REALISATIONS</h4>
-        </div>
-        <div class="infoContainer" id="realisationsContainer">
-          <p><b><i>Transcriptor</i></b> : Logiciel de transcription</p>
-          <p><b><i>Soulmeet</i></b> : site de rencontre</p>
-          <p><b><i>LockMe</i></b> : Logiciel de verrouillage</p>
-          <p><b><i>uManage</i></b> : Logiciel de gestion d'établissement universitaire</p>
-        </div>
-        <div class="seeMore">
-          <p id="moreInfos"><u>Voir plus</u></p>
-        </div>
-      </div>
-      <div class="infoBox" id="hobbiesBox">
-        <div class="titleContainer" id="hobbiesHeader">
-          <h4>CENTRE D'INTERETS</h4>
-        </div>
-        <div class="infoContainer" id="hobbiesContainer">
-          <table>
-            <tr>
-              <td>
-                <img src="controller.png" alt="jeu video">
-              </td>
-              <td class="cellValue">Jeux vidéo</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="football.png" alt="football">
-              </td>
-              <td class="cellValue">Football</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="musique.png" alt="musique">
-              </td>
-              <td class="cellValue">Musique</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="natation.png" alt="natation">
-              </td>
-              <td class="cellValue">Natation</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="babyfoot.png" alt="babyfoot">
-              </td>
-              <td class="cellValue">Babyfoot</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="pingpong.png" alt="pingpong">
-              </td>
-              <td class="cellValue">Ping pong</td>
-            </tr>
-          </table>
-        </div>
-        <div class="seeMore">
-          <p id="moreInfos"><u>Voir plus</u></p>
-        </div>
-      </div>
+      </section>
     </main>
     <script src="animations.js"></script>
   </body>
