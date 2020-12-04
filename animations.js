@@ -13,7 +13,7 @@ function ChangeSlide(sens) {
     document.getElementById('slide').style.transitionDuration = '5s';
 }
 function firstLoad(){
-  setTimeout(slidePopup, 2000);
+  setTimeout(slidePopup, 4000);
 }
 
 function slideUp() {
